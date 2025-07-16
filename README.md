@@ -21,5 +21,5 @@ This project is a **static website** designed for a fictional tourism planning c
 
 ---
 
-## 📂 Folder Structure
+
 
