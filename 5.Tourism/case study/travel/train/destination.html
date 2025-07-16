@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Tickets</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-image: url(background.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 30px 80px 30px 80px;
+      border: 2px #c4c4c4 solid;
+      border-radius: 20px;
+      background-color: rgba(209, 210, 211, 0.7);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333; /* label color */
+    }
+    .form-group select,
+    .form-group input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      box-sizing: border-box;
+      background-color: #f9f9f9; /* input background color */
+      color: #555; /* input text color */
+    }
+    .form-group select:focus,
+    .form-group input[type="date"]:focus {
+      outline: none;
+      border-color: #007bff; /* border color on focus */
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="ticket_booking.html">
+      <div class="form-group">
+        <label for="departure" style="color: #444;">Departure Point:</label>
+        <select name="departure" id="departure" required>
+          <option value="">Boarding</option>
+          <option value="Kadapa">Kadapa</option>
+          <option value="Tirupathi">Tirupathi</option>
+          <option value="Vijawada">Vijawada</option>
+          <option value="Guntur">Guntur</option>
+          <option value="Kurnool">Kurnool</option>
+          <option value="Nellore">Nellore</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="boarding" style="color: #444;">Boarding Point:</label>
+        <select name="boarding" id="boarding" required>
+          <option value="">Departure</option>
+          <option value="Nellore">Nellore</option>
+          <option value="Kurnool">Kurnool</option>
+          <option value="Guntur">Guntur</option>
+          <option value="Tirupathi">Tirupathi</option>
+          <option value="Vijawada">Vijawada</option>
+          <option value="Kadapa">Kadapa</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="class" style="color: #444;">Select class:</label>
+        <select name="class" id="class" required>
+          <option value="">Class</option>
+          <option value="AC">AC</option>
+          <option value="Sleeper">Sleeper</option>
+          <option value="General">General</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="berth" style="color: #444;">Select berth type:</label>
+        <select name="berth" id="berth" required>
+          <option value="">Berth</option>
+          <option value="Lower">Lower</option>
+          <option value="Middle">Middle</option>
+          <option value="Upper">Upper</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date" style="color: #444;">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <button type="submit" class="btn" onclick="location.href='./thankyou.html'">Book Tickets</button>
+    </form>
+  </div>
+</body>
+</html>

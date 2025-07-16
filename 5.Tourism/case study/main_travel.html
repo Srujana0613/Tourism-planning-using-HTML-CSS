@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation ventures</title>
+    <!-- REMIXICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url('main_travel.jpg');
+              background-size: cover;
+              background-position: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* Updated style for button container */
+        .button-container {
+            display: flex; /* Set the display property to flex */
+            justify-content: center; /* Horizontally center the buttons */
+        }
+        
+        h1 {
+            color: white;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        p {
+            color: white;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin-bottom: 60px;
+        }
+        
+        button {
+            position: relative;
+            overflow: hidden;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50px;
+            background-color: rgb(21, 92, 172);
+            border: solid 4px hsl(50deg 100% 50%);
+            font-family: inherit;
+            margin: 20px; /* Add margin between buttons */
+            padding: 0px 31px 0px 30px;
+        }
+        
+           
+           .default-btn,.hover-btn {
+            background-color: rgb(21, 92, 172);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: all .3s ease;
+           }
+           
+           .hover-btn {
+            position: absolute;
+            inset: 0;
+            background-color:rgb(21, 92, 172);
+            transform: translate(0%,100%);
+           }
+           
+           .default-btn span {
+            color: hsl(0, 0%, 100%);
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+           }
+           
+           .hover-btn span {
+            color: hsl(50deg 100% 50%);
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: 600;
+           }
+           
+           button:hover .default-btn {
+            transform: translate(0%,-100%);
+           }
+           
+           button:hover .hover-btn {
+            transform: translate(0%,0%);
+           }
+          </style>
+</head>
+<body>
+    <h1>Vacation ventures</h1>
+    <p>Choose your mode of Transport:</p>
+    <!-- Container for buttons -->
+    <div class="button-container">
+        <button onclick="location.href='./travel/bus/index.html'">
+            <div class="default-btn">
+                <span>Bus &nbsp;&nbsp;<i class="ri-bus-fill"></i></span>
+            </div>
+            <div class="hover-btn">
+                <span>Book now <i class="ri-arrow-right-circle-fill"></i></span>
+            </div>
+        </button>
+        <button onclick="location.href='./travel/train/index.html'">
+            <div class="default-btn">
+                <span>Train &nbsp;&nbsp;<i class="ri-train-fill"></i></span>
+            </div>
+            <div class="hover-btn">
+                <span>&nbsp;&nbsp;&nbsp;Book now <i class="ri-arrow-right-circle-fill"></i></span>
+            </div>
+        </button>
+        <button onclick="location.href='./travel/flight/index.html'">
+            <div class="default-btn">
+                <span>Flight &nbsp;&nbsp;<i class="ri-flight-takeoff-fill"></i></span>
+            </div>
+            <div class="hover-btn">
+                <span>&nbsp;&nbsp;&nbsp;Book now <i class="ri-arrow-right-circle-fill"></i></span>
+            </div>
+        </button>
+    </div>
+</body>
+
+</html>
